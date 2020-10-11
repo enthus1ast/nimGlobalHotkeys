@@ -69,10 +69,8 @@ when isMainModule:
 
   while true:
     let hotkeyOpt = getHotkey()
-    echo ":D"
     if hotkeyOpt.isNone: continue
     let hotkey = hotkeyOpt.get()
-    echo hotkey
     if hotkey == doStuff:
       echo "doStuff"
     elif hotkey == doOtherStuff:
