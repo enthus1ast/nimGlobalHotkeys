@@ -15,7 +15,7 @@ type
     orgId*: LPARAM
 
 proc `==`*(hpA, hpB: HotkeyPress): bool =
-  ## To thes if the hotkey matches our matcher
+  ## To test if the hotkey matches our matcher
   hpA.key == hpB.key and
   hpA.mods == hpB.mods
 

@@ -5,6 +5,7 @@ import globalHotkeys
 let doStuff =  register('r', [MAlt, MControl])
 let doOtherStuff =  register('a', [MAlt, MShift])
 let doEvenMoreStuff =  register('b', [MAlt])
+let doQuit = register('q', [MAlt])
 
 while true:
   let hotkeyOpt = getHotkey()
@@ -16,4 +17,7 @@ while true:
     echo "doOtherStuff"
   elif hotkey == doEvenMoreStuff:
     echo "doEvenMoreStuff"
+  elif hotkey == doQuit:
+    echo "bye bye..."
+    quit()
 ```
