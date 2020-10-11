@@ -64,8 +64,7 @@ when isMainModule:
   let doStuff =  register('r', [MAlt, MControl])
   let doOtherStuff =  register('a', [MAlt, MShift])
   let doEvenMoreStuff =  register('b', [MAlt])
-  let quitAndUnregister = register('q', [MAlt])
-  let quitAndUnregister2 = register('w', [MAlt])
+  let doQuit = register('q', [MAlt])
 
   while true:
     let hotkeyOpt = getHotkey()
@@ -77,9 +76,6 @@ when isMainModule:
       echo "doOtherStuff"
     elif hotkey == doEvenMoreStuff:
       echo "doEvenMoreStuff"
-    elif hotkey == quitAndUnregister:
-      echo "unregister"
-      unregister(hotkey) # TODO the id stuff is not clear to me... (i GUESS this should unregister all with id 1..)
-    elif hotkey == quitAndUnregister2:
-      echo "unregister2"
-      unregister(hotkey) # TODO the id stuff is not clear to me... (i GUESS this should unregister all with id 1..)
+    elif hotkey == doQuit:
+      echo "bye bye..."
+      quit()
